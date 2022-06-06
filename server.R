@@ -21,12 +21,6 @@ mergedCleaned <- merge(monkeypox_data, countryCoordinates2, by="country", all.x=
 mergedCleaned
 
 
-
-
-
-
-
-
 # Define server logic to plot monkeypox data for various #continents/countries
 shinyServer(function(input,output){
   
@@ -50,11 +44,12 @@ shinyServer(function(input,output){
   # Plot a world map visualizing monkeypox incidence. The radius of the circle correspond
   # to the number of monkeypox new cases (larger radius = more monkeypox new cases)
   
+  
   output$map<- renderPlot({
     
     map("world",col="gray90", fill=TRUE)
-    radius <- (mergedCleaned$Confirmed_Cases)
-    symbols(mergedCleaned$longitude, mergedCleaned$latitude, bg = "blue", fg = "red", lwd = 0.1, circles = radius, inches = 0.1, add = TRUE)
+    radius <- (mergedCleaned[,input$plottie])
+    symbols(mergedCleaned$longitude, mergedCleaned$latitude, bg = "red", fg = "green", lwd = 0.1, circles = radius, inches = 0.12, add = TRUE)
   
   })
   

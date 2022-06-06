@@ -17,3 +17,5 @@ A world map with data plotted on it.
 
 My dataset includes countrys, confirmed cases, suspected cases, Hospitalized and travel history from people who have, or might have the monkeypox virus. The dataset was created by: Deep Contractor and was obtained from: 
 https://www.kaggle.com/datasets/deepcontractor/monkeypox-dataset-daily-updated?select=Monkey_Pox_Cases_Worldwide.csv
+
+To plot the indication per country, I would need a data frame with the longtitudes and latitudes from all countrys in the world, I found the following dataset online: https://www.kaggle.com/datasets/paultimothymooney/latitude-and-longitude-for-every-country-and-state
