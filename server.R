@@ -26,7 +26,7 @@ shinyServer(function(input,output){
   
   # Sentence presenting the table in a reactive expression
   tableText<- reactive({
-    paste("This table ranks countries by number of monkeypox cases. You have selected all countries in")
+    paste("This table ranks countries by number of monkeypox cases. You can change the amount of countries plotted on the left!")
   })
   
   # now I return the tabletText for printing as a caption
